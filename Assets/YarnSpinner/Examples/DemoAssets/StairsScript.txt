@@ -1,0 +1,51 @@
+title: Start
+tags: 
+colorID: 1
+position: -691,-292
+---
+Operator: Please proceed down the stairs
+
+I don't want to do this...
+
+Operator: Remember that you agreed to do this.
+
+Operator: Please proceed down the stairs. 
+===
+title: Proceed
+tags: 
+colorID: 0
+position: 86,-279
+---
+{There needs to be a wait before this triggers}
+
+It’s starting to get dark...
+
+[[getting dark]]
+===
+title: getting dark
+tags: 
+colorID: 0
+position: 339,-283
+---
+Remember that you can use your torch.
+
+->How do I do that?
+    [[how]]
+
+->Oh right, I forgot
+    [[forgot]]
+===
+title: how
+tags: 
+colorID: 0
+position: 595,-284
+---
+You can click the left button on your mouse to turn on your torch
+===
+title: forgot
+tags: 
+colorID: 0
+position: 340,-28
+---
+Please proceed down the stairs.
+===

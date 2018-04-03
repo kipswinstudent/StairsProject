@@ -10,10 +10,15 @@ public class PlayerRepositionScript : MonoBehaviour {
 	Vector3 reference;
 	
 	public int loopCount;
+	
+	void Start ()
+	{
+		RenderSettings.ambientLight = new Color(0.1f, 0.1f, 0.1f);
+	}
 
 	void Update ()
 	{
-		Debug.Log ("Loop COunt = " + loopCount);
+		Debug.Log ("Loop Count = " + loopCount);
 	}
 
 	void OnTriggerEnter (Collider other)
@@ -28,7 +33,7 @@ public class PlayerRepositionScript : MonoBehaviour {
 	
 	void ChangeLighting ()
 	{
-		if (loopCount <= 2) {
+		/*if (loopCount == 2) {
 			RenderSettings.ambientLight = new Color(0.5f, 0.5f, 0.5f);
 		}
 		if (loopCount == 3) {
@@ -37,8 +42,17 @@ public class PlayerRepositionScript : MonoBehaviour {
 		if (loopCount == 6) {
 			RenderSettings.ambientLight = Color.red;
 		}
-/*		else {
-			RenderSettings.ambientLight = Color.black;
+		else {
+			RenderSettings.ambientLight = new Color(0.2f, 0.2f, 0.2f);
 		}*/
+		
+		if (loopCount < 10) {
+			RenderSettings.ambientLight = new Color ((loopCount / 10), (loopCount / 10), (loopCount / 10));
+			Debug.Log ("Ambient colour = " + (loopCount/10));
+		}
+		if (loopCount >= 10) {
+			RenderSettings.ambientLight = Color.black;
+		}
+		
 	}
 }

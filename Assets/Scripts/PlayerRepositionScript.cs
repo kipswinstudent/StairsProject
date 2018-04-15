@@ -19,6 +19,11 @@ public class PlayerRepositionScript : MonoBehaviour {
 	void Update ()
 	{
 		Debug.Log ("Loop Count = " + loopCount);
+		
+		if (Input.GetButtonDown ("Jump")) {
+			loopCount++;
+		}
+		ChangeLighting();
 	}
 
 	void OnTriggerEnter (Collider other)
